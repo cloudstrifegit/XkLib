@@ -22,9 +22,11 @@
 #  define XkCompiler XkCompilerUnknown
 #endif
 
+/*
 #ifndef XkPlatform
 #  define XkCompiler XkPlatformunknown
 #endif
+*/
 
 #ifndef XkArchitecture
 #  define XkArchitecture XkArchitecture32Bit

@@ -2,6 +2,7 @@
 #define XK_REGISTER_TYPE_H
 
 //#include "XkClassPrototypes.h"
+#include <typeinfo>
 
 namespace Xk
 {

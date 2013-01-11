@@ -34,7 +34,7 @@
 # define NOMINMAX
 #elif defined (LINUX) || defined(_LINUX)
 # define XkPlatform XkPlatformLinux
-#elif defined (__ANDROID__) || define(ANDROID)
+#elif defined (__ANDROID__) || defined(ANDROID)
 #define XkPlatform XkPlatformAndroid
 #endif
 

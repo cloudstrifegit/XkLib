@@ -19,7 +19,7 @@ namespace Xk
     note.
         Much of this code is based of the SharedPtr class from Ogre3D http://www.ogre3d.org
 */
-template<typename T> class XkPublicTemplateClass SharedPointer
+template<typename T> class /*XkPublicTemplateClass*/ SharedPointer
 {
   public:
   
@@ -71,9 +71,9 @@ template<typename T> class XkPublicTemplateClass SharedPointer
     if (mPtr == other.getPtr())
      return *this;
     
-    SharedPtr<T> temp(other);
+    SharedPointer<T> temp(other);
     swap(temp);
-    reutrn *this;
+    return *this;
    }
    
    virtual ~SharedPointer()

@@ -161,7 +161,7 @@ class map<K, T*, garbage_collection> : protected garbage_collection::template im
   
   T* at_or_null(const K& key)
   {
-   std::map<K,T*>::iterator it container->find(key);
+   typename std::map<K,T*>::const_iterator it = container->find(key);	
    if (it == container->end())
     return 0;
    return (*it).second;
@@ -174,7 +174,7 @@ class map<K, T*, garbage_collection> : protected garbage_collection::template im
   
   const T* at_or_null(const K& key) const
   {
-   std::map<K,T*>::const_iterator it container->find(key);
+	typename std::map<K,T*>::const_iterator it = container->find(key);
    if (it == container->end())
     return 0;
    return (*it).second;
@@ -237,7 +237,7 @@ template<typename K, typename T> T* get_or_null(const Xk::map<K,T*>& map, const 
 
 template<typename K, typename T> T* get_or_null(const std::map<K,T*>& map, const K& lookFor)
 {
- std::map<K,T*>::const_iterator it = map.find(lookFor);
+ typename std::map<K,T*>::const_iterator it = map.find(lookFor);
  if (it == map.end())
   return NULL;
  return (*it).second;
@@ -252,7 +252,7 @@ template<typename K, typename T> T* get_or_null(Xk::map<K,T*>& map, const K& loo
 
 template<typename K, typename T> T* get_or_null(std::map<K,T*>& map, const K& lookFor)
 {
- std::map<K,T*>::const_iterator it = map.find(lookFor);
+ typename std::map<K,T*>::const_iterator it = map.find(lookFor);
  if (it == map.end())
   return NULL;
  return (*it).second;

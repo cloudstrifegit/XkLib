@@ -238,7 +238,7 @@ template<typename T> class  const_buffer
      if (*it == value)
       return it - first_ptr;
     }
-    return npos;
+    return std::string::npos;
    }
 
    inline const T* first() const
