@@ -247,7 +247,7 @@ const Real& Vec2::operator[](const size_t i) const
  return (&x)[i];
 }
 
-String Vec2::to_s() const
+std::string Vec2::to_s() const
 {
  std::ostringstream ss;
  ss << x << " " << y;

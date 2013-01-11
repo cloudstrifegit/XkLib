@@ -5,7 +5,6 @@
                                                                                        
 
 #include "XkStable.h"
-#include "XkString.h"
 #include "XkMatrix.h"
 #include "XkEnums.h"
 
@@ -60,8 +59,6 @@ class XkPublicClass Vec3
   Vec3 used() const;
 
   Vec3(const Real& X, const Real& Y, const Real& Z);
-
-  Vec3(const std::string&);
 
   void set(const Real& X, const Real& Y, const Real& Z);
 
@@ -195,7 +192,7 @@ class XkPublicClass Vec3
    z = vec.z;
   }
 
-  String to_s() const;
+  std::string to_s() const;
 
   XkPublicFunction friend std::ostream& operator << (std::ostream& o, const Vec3& v)
   {

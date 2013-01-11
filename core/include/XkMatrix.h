@@ -8,7 +8,6 @@
 #include "XkMatrix.h"
 #include "XkVec3.h"
 #include "XkQuat.h"
-#include "XkString.h"
 #include "XkEnums.h"
 
                                                                                        
@@ -69,7 +68,7 @@ class XkPublicClass Matrix33
  
  const Real* ptr() const;
 
- String to_s() const;
+ std::string to_s() const;
 
  XkPublicFunction friend std::ostream& operator << (std::ostream& o, const Matrix33& m)
  {
@@ -175,7 +174,7 @@ class XkPublicClass Matrix44
 
  const Real* ptr() const;
  
- String to_s() const;
+ std::string to_s() const;
 
  XkPublicFunction friend std::ostream& operator << (std::ostream& o, const Matrix44& m)
  {

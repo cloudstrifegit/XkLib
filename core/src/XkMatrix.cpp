@@ -170,7 +170,7 @@ const Real* Matrix33::ptr() const
  return (Real*) m.M;
 }
 
-inline String Matrix33::to_s() const
+inline std::string Matrix33::to_s() const
 {
  std::ostringstream s;
  
@@ -481,7 +481,7 @@ Vec3 Matrix44::operator*(const Vec3& other) const
        );
 }
 
-inline String Matrix44::to_s() const
+inline std::string Matrix44::to_s() const
 {
  std::ostringstream s;
  

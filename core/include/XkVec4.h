@@ -5,7 +5,6 @@
                                                                                        
 
 #include "XkStable.h"
-#include "XkString.h"
 #include "XkMath.h"
 #include "XkMatrix.h"
                                                                                        
@@ -116,7 +115,7 @@ class XkPublicClass Vec4
   
   const Real& operator[](const size_t i) const;
 
-  String to_s() const;
+  std::string to_s() const;
 
   std::vector<Real> to_a() const;
 

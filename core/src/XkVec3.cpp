@@ -48,13 +48,6 @@ Vec3::Vec3(const Real& X, const Real& Y, const Real& Z)
  set(X, Y, Z);
 };
 
-Vec3::Vec3(const std::string& str)
-{
- std::stringstream s;
- s << Strings::replace_copy(str, ',', ' ');
- s >> x >> y >> z;
-}
-
 void Vec3::set(const Real& X, const Real& Y, const Real& Z)
 {
  x = X;
@@ -364,7 +357,7 @@ Vec3 Vec3::random(float x0, float x1, float y0, float y1, float z0, float z1)
  return Vec3(Math::random(x0,x1), Math::random(y0,y1), Math::random(z0,z1));
 }
 
-String Vec3::to_s() const
+std::string Vec3::to_s() const
 {
  std::ostringstream ss;
  ss << x << " " << y << " " << z;
