@@ -35,7 +35,7 @@ ADD_EXECUTABLE(xktest ${SRC_LIST})
 IF(WIN32)
 	TARGET_LINK_LIBRARIES(xktest gtest.lib gtest_main.lib xkcore.lib)
 ELSE(WIN32)
-	TARGET_LINK_LIBRARIES(xktest libgtest.a libgtest_main.a xkcore.a)
+	TARGET_LINK_LIBRARIES(xktest libgtest.a libgtest_main.a xkcore.a pthread dl)
 ENDIF(WIN32)
 
 INSTALL(TARGETS DESTINATION bin)
