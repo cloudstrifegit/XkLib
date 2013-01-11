@@ -1,0 +1,30 @@
+#ifndef XK_H
+#define XK_H
+
+#include "XkAllocatables.h"
+#include "XkAllocator.h"
+#include "XkAutoConfiguration.h"
+#include "XkBuffer.h"
+#include "XkClasses.h"
+#include "XkConfiguration.h"
+#include "XkEnums.h"
+#include "XkException.h"
+#include "XkGC.h"
+#include "XkHash.h"
+#include "XkMallocAllocator.h"
+#include "XkMap.h"
+#include "XkMapIterator.h"
+#include "XkMath.h"
+#include "XkMatrix.h"
+#include "XkQuat.h"
+#include "XkRadian.h"
+#include "XkSharedPointer.h"
+#include "XkStable.h"
+#include "XkString.h"
+#include "XkType2Id.h"
+#include "XkVec2.h"
+#include "XkVec3.h"
+#include "XkVec4.h"
+#include "XkVersion.h"
+
+#endif
