@@ -21,3 +21,5 @@ SET(SRC_LIST src/XkAllocator.cpp
 )
 
 ADD_LIBRARY(xkcore ${SRC_LIST})
+
+INSTALL(TARGETS DESTINATION lib)
