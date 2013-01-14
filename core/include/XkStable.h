@@ -43,7 +43,10 @@
 #ifndef XkForceInline
 #define XkForceInline
 #endif
-                                                                                    
+
+#if XkPlatform == XkPlatformLinux && XkPhysicsLib == XkPhysicsLibHavok
+#error Can not use havok on linux platform
+#endif
 
 #define XkIntTypeMax INT_MAX
 #define XkIntTypeMin (-INT_MAX)

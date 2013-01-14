@@ -3,23 +3,18 @@ INCLUDE_DIRECTORIES(
 )
 
 IF(WIN32)
-ADD_DEFINITIONS(-DXK_STATIC_LIBRARY)
+ADD_DEFINITIONS(-DXK_DYNAMIC_LIBRARY)
 ENDIF(WIN32)
 
-SET(SRC_LIST src/XkAllocator.cpp
-			 src/XkClasses.cpp
-			 src/XkException.cpp
-			 src/XkGC.cpp
-			 src/XkMallocAllocator.cpp
-			 src/XkMatrix.cpp
-			 src/XkQuat.cpp
-			 src/XkRadian.cpp
-			 src/XkString.cpp
-			 src/XkVec2.cpp
-			 src/XkVec3.cpp
-			 src/XkVec4.cpp
-)
+AUX_SOURCE_DIRECTORY(./src SRC_LIST)
 
-ADD_LIBRARY(xkcore ${SRC_LIST})
+FILE(GLOB HDR_FILE_LIST "include/*.h")
+FOREACH(myhdr ${HDR_FILE_LIST})
+	LIST(APPEND INC_LIST ${myhdr})
+ENDFOREACH()
 
-INSTALL(TARGETS DESTINATION lib)
+LIST(APPEND SRC_LIST "${INC_LIST}")
+
+ADD_LIBRARY(xkcore SHARED ${SRC_LIST})
+
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)

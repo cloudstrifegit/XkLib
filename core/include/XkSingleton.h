@@ -13,52 +13,34 @@ namespace Xk
 
                                                                                        
 
-/*! function. Singleton
-    desc.
-         Generic singleton class
-*/
-template<class T> class Singleton
+template <typename T>
+struct Singleton
 {
-  
-  public:
-  
-  /*! function. getSingleton
-      desc.
-          Get's a copy of the singleton pointer
-  */
-  static T* getSingleton()
-  {
-   return sSingleton;
-  }
-  
-  protected: // Functions
-  
-  /*! constructor. Singleton
-      desc.
-          Constructor for inherited classes.
-  */
-  Singleton()
-  {
-   sSingleton = static_cast<T*>(this);
-  }
-  
-  /*! destructor. Singleton
-  */
- ~Singleton()
-  {
-   sSingleton = 0;
-  }
-  
-  protected:
-  
-   static T* sSingleton;
-  
-}; // class Singleton
+private:
+	struct object_creator
+	{
+		object_creator() { Singleton<T>::instance(); }
+		inline void do_nothing() const { }
+	};
 
-                                                                                       
+	static object_creator create_object;
 
-} // namespace Xk
+public:
+	typedef T	object_type;
+	static object_type& instance()
+	{
+		static object_type obj;
 
+		create_object.do_nothing();
+		return obj;
+	}
+};
+
+template<typename T>
+typename Singleton<T>::object_creator
+	Singleton<T>::create_object;
+
+}// namespace Xk
                                                                                        
 
 #endif

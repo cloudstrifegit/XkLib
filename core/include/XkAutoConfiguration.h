@@ -19,6 +19,9 @@
 #define XkArchitecture32Bit 32
 #define XkArchitecture64Bit 64
 
+#define XkPhysicsLibPhysX 0
+#define XkPhysicsLibHavok 1
+
 #define XK_EXPORT_OPTIONS_EXPORT 1
 #define XK_EXPORT_OPTIONS_IMPORT 2
 #define XK_EXPORT_OPTIONS_AVOID 3
@@ -32,10 +35,13 @@
 #if defined (_WIN32) || defined (__WIN32)
 # define XkPlatform XkPlatformWindows
 # define NOMINMAX
+#define XkPhysicsLib XkPhysicsLibHavok
 #elif defined (LINUX) || defined(_LINUX)
 # define XkPlatform XkPlatformLinux
+#define XkPhysicsLib XkPhysicsLibPhysX
 #elif defined (__ANDROID__) || defined(ANDROID)
 #define XkPlatform XkPlatformAndroid
+#define XkPhysicsLib XkPhysicsLibPhysX
 #endif
 
 #if defined(_M_X64) || defined (_M_X64)

@@ -1,6 +1,5 @@
 
 #include "XkVec2.h"
-
                                                                                        
 
 namespace Xk
@@ -251,6 +250,7 @@ std::string Vec2::to_s() const
 {
  std::ostringstream ss;
  ss << x << " " << y;
+ 
  return ss.str();
 }
 

@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "XkCoreTest.h"
+#include "XkPhysicsTest.h"
 
 int main(int argc, char** argv)
 {
