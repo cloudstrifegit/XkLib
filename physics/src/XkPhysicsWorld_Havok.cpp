@@ -1,6 +1,7 @@
 #if XkPhysicsLib == XkPhysicsLibHavok
 
 #include "XkPhysicsWorld_Havok.h"
+#include "Xk.h"
 
 // Math and base include
 #include <Common/Base/hkBase.h>

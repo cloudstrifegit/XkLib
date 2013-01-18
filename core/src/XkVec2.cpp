@@ -251,7 +251,7 @@ std::string Vec2::to_s() const
  std::ostringstream ss;
  ss << x << " " << y;
  
- return ss.str();
+ return ss.str().c_str();
 }
 
 std::vector<Real> Vec2::to_a() const

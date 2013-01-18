@@ -11,6 +11,7 @@ SET(havokinc $ENV{HAVOK_SDK_HOME}/Source)
 LINK_DIRECTORIES(
 	${havoklib}
 	$ENV{PHYSX_SDK_HOME}/Lib/win32
+	${PROJECT_BINARY_DIR}/lib
 )
 
 INCLUDE_DIRECTORIES(
@@ -59,6 +60,7 @@ TARGET_LINK_LIBRARIES(xkphysics
 						PxTask.lib
 						RepX3.lib
 						RepXUpgrader3.lib
+						xkcore.lib
 )
 
 ENDIF(WIN32)
